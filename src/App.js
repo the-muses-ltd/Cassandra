@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          This will be Cassandra. 
+          This will be Cassandra.
         </p>
       </header>
     </div>
