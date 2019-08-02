@@ -13,7 +13,6 @@ function App() {
         <p>
           This will be Cassandra.
         </p>
-        <button onClick={this.onClick(hashHistory.push("/addUser"))}>Add New user</button>
       </header>
     </div>
   );
