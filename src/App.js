@@ -1,10 +1,13 @@
 import React from "react";
+
 import logo from "./logo.svg";
 import "./App.css";
+import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <header className="App-header">
         {/* <img src="https://gdurl.com/LBGp" className="App-logo" alt="logo" /> */}
         <img src="https://gdurl.com/yLkZ" className="heroLogo" alt="logo" />
