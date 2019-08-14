@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Components/Navbar/Navbar'
+import logo from "./logo.svg";
+import "./App.css";
+import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
- 
   return (
     <div className="App">
       <Navbar />
@@ -17,7 +16,17 @@ function App() {
         </h1>
 
         <p className="landingPara">
-          Join developers from all over the world to make equal access to education a reality for everyone. <a className="landingParaLink" href="https://github.com/the-muses/Cassandra/wiki/Cassandra-Road-Map#mvp-list" target="_blank">Here</a> is a link to our current MVP list and if you need any help then just speak to our chatbot.
+          Join developers from all over the world to make equal access to
+          education a reality for everyone.{" "}
+          <a
+            className="landingParaLink"
+            href="https://github.com/the-muses/Cassandra/wiki/Cassandra-Road-Map#mvp-list"
+            target="_blank"
+          >
+            Here
+          </a>{" "}
+          is a link to our current MVP list and if you need any help then just
+          speak to our chatbot.
         </p>
 
         {/* <Projects/> */}

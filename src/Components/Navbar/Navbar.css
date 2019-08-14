@@ -1,13 +1,13 @@
 .Navbar {
   height: 3em;
   display: flex;
-  font-family: 'Alegreya', serif;
+  font-family: "Alegreya", serif;
   padding: 0.5em;
 }
 
 .Navbar-headline {
   display: inline-block;
-  color: #7FBF7F;
+  color: #7fbf7f;
   text-decoration: none;
   font-size: 2em;
 }
@@ -26,7 +26,7 @@
 }
 
 .Navbar-link a {
-  color: #7FBF7F;
+  color: #7fbf7f;
   font-size: 1.5em;
   text-decoration: none;
 }
