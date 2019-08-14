@@ -11,7 +11,7 @@ class Courses extends Component {
   render() {
     return (
       <div>
-        <H1>Courses Page</H1>
+        <h1>Courses Page</h1>
       </div>
     );
   }
