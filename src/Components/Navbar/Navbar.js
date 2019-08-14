@@ -1,24 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import SignedInLinks from './SignedInLinks'
+import SignedOutLinks from './SignedOutLinks'
 
-import './Navbar.css'
-
-const Navbar = () => (
-	<nav className="Navbar">
-		<a className="Navbar-headline" href="/">
-			Cassandra
-		</a>
-		<ul className="Navbar-links">
-			<li className="Navbar-link">
-				<a href="#">Courses</a>
-			</li>
-			<li className="Navbar-link">
-				<a href="#">Online Recourses</a>
-			</li>
-			<li className="Navbar-link">
-				<a href="#">About</a>
-			</li>
-		</ul>
-	</nav>
-)
+const Navbar = () => {
+  return (
+    <nav className="nav-wrapper grey darken-3">
+      <div className="container">
+        <Link to='/' className="brand-logo">Cassandra</Link>
+        <SignedInLinks />
+        <SignedOutLinks />
+      </div>
+    </nav>
+  )
+}
 
 export default Navbar
