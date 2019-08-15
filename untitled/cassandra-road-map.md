@@ -4,7 +4,7 @@
 
 ### Stage 1: Minimum Viable Product \(MVP\)
 
-Creation of the MVP to distribute and aggregate educational recourses.
+Creation of the MVP to distribute and aggregate educational resources.
 
 ### Stage 2: Launch
 
@@ -40,7 +40,7 @@ Ability to watch lecture video \(linked to youtube and Vimeo, external link and 
 
 ### External online resources
 
-A page of external resources and platforms where users can search for what resources are already freely available online. These recourses will be vetted to confirm that they are actually
+A page of external resources and platforms where users can search for what resources are already freely available online. These resources will be vetted to confirm that they are actually
 
 * Logged in Users can create posts of external online resources with links to these resources.
 
