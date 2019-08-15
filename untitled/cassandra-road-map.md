@@ -1,4 +1,4 @@
-# Cassandra-Road-Map
+# Road Map
 
 ## Platform Road Map
 

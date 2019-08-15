@@ -1,4 +1,4 @@
-# Contribution-Guidlines
+# Contribution Guidelines
 
 We use the Agile/Lean methodology of software development. This means we keep things as simple as possible and create iterative designs, with an MVP first and then constantly improve the project from this point on.
 

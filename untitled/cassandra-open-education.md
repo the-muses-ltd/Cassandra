@@ -1,4 +1,4 @@
-# Cassandra-Open-Education
+# About
 
 ## About Cassandra
 
