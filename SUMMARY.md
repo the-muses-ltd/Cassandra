@@ -8,3 +8,7 @@
   * [License](untitled/license.md)
   * [Licensing Information](untitled/licensing-information.md)
 
+## Prisma Schema
+
+* [Schema and Database](prisma-schema/schema-and-database.md)
+
