@@ -11,7 +11,7 @@ https://eu1.prisma.sh/tim-dommett/demo/dev
 ```
 
 {% hint style="info" %}
- This can also be used as the http endpoint for any frontend development. \(This database endpoint is safe for use and to be distributed as no payment information has been included\)
+ This can also be used as the http endpoint for any frontend development. \(This database endpoint is safe for use and to be distributed as no payment information has been associated to this account\)
 {% endhint %}
 
 The schema design is as follows:
