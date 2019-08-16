@@ -1,4 +1,4 @@
 # Licensing Information
 
-Cassandra is [MIT licensed](LICENSE).
+Cassandra is [MIT licensed](license.md).
 

@@ -4,10 +4,10 @@ A platform to distribute educational resources online, which will be freely avai
 
 ## Documentation
 
-* [About Cassandra](https://github.com/the-muses-ltd/Cassandra/wiki/Cassandra-Open-Education)
-* [Cassandra Road Map](https://github.com/the-muses-ltd/Cassandra/wiki/Cassandra-Road-Map)
-* [Contributing Guidlines](https://github.com/the-muses-ltd/Cassandra/wiki/Contribution-Guidlines)
-* [Licensing Information](https://github.com/the-muses-ltd/Cassandra/wiki/Licensing-Information)
+* [About Cassandra](untitled/cassandra-open-education.md)
+* [Cassandra Road Map](untitled/cassandra-road-map.md)
+* [Contributing Guidelines](untitled/contribution-guidlines.md)
+* [Licensing Information](untitled/licensing-information.md)
 * [Code of Conduct](https://)
 
 ## Setup for Local Development

@@ -1,22 +1,22 @@
 # Cassandra
 
-## [Cassandra Open Education](Cassandra-Open-Education)
+## [Cassandra Open Education](cassandra-open-education.md)
 
-* [About Cassandra](https://github.com/the-muses-ltd/Cassandra/wiki/Cassandra-Open-Education#about-cassandra)
-* [About The Muses](https://github.com/the-muses-ltd/Cassandra/wiki/Cassandra-Open-Education#about-the-muses)
+* [About Cassandra](cassandra-open-education.md#about-cassandra)
+* [About The Muses](cassandra-open-education.md#about-the-muses)
 
-## [Cassandra Road Map](Cassandra-Road-Map)
+## [Cassandra Road Map](cassandra-road-map.md)
 
-* [Platform Roadmap](https://github.com/the-muses-ltd/Cassandra/wiki/Cassandra-Road-Map#platform-road-map)
-* [MVP List](https://github.com/the-muses-ltd/Cassandra/wiki/Cassandra-Road-Map#mvp-list)
-* [Educational Roadmap](https://github.com/the-muses-ltd/Cassandra/wiki/Cassandra-Road-Map#educational-road-map)
+* [Platform Roadmap](cassandra-road-map.md#platform-road-map)
+* [MVP List](cassandra-road-map.md#mvp-list)
+* [Educational Roadmap](cassandra-road-map.md#educational-road-map)
 
-## [Contribution Guidlines](Contribution-Guidlines)
+## [Contribution Guidelines](contribution-guidlines.md)
 
-* [Contributing to Cassandra](https://github.com/the-muses-ltd/Cassandra/wiki/Contribution-Guidlines#contributing-to-the-muses-projects)
-* [Github Etiquette](https://github.com/the-muses-ltd/Cassandra/wiki/Contribution-Guidlines#github-etiquette)
+* [Contributing to Cassandra](contribution-guidlines.md)
+* [Github Etiquette](contribution-guidlines.md#github-etiquette)
 
-## [Licensing Information](Licensing-Information)
+## [Licensing Information](licensing-information.md)
 
-* [MIT License](https://github.com/the-muses-ltd/Cassandra/wiki/LICENSE)
+* [MIT License](license.md)
 
