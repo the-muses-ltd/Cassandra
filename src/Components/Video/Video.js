@@ -4,6 +4,15 @@ import ReactPlayer from "react-player";
 
 import getVideo from "../../Apollo/Queries/getVideo";
 
+// Only videoId prop is needed
+// Other props will have default values provided by react-player
+
+// Default values:
+// width - 640
+// height - 360
+// controls - false
+// loop - false
+
 const Video = ({ videoId, width, height, style, controls, loop }) => {
   return (
     <Query query={getVideo} variables={{ id: videoId }}>
