@@ -1,0 +1,26 @@
+.aboutTitle {
+  color: #7fbf7f;
+  font-family: "Alegreya", serif;
+  padding: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: xx-large;
+}
+
+.aboutHeader {
+  color: #7fbf7f;
+  font-family: "Alegreya", serif;
+  padding: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: x-large;
+}
+
+.aboutParagraph {
+  color: #7fbf7f;
+  font-family: "Alegreya", serif;
+  padding: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: large;
+}
