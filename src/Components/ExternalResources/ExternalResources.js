@@ -29,7 +29,7 @@ export default class ExternalResources extends Component {
           think have value and post any courses you have found to help others
           know what could help them get to that next stage of their careers.
         </p>
-
+        {/* TODO: hide add button for unauthenticated users */}
         <button onClick={this.toggleAddResourceForm}>
           {this.state.addResourceFormOpen ? "x" : "+"}
         </button>

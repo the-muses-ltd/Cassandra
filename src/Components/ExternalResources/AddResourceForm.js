@@ -18,6 +18,7 @@ export default class AddResourceForm extends Component {
   }
 
   render() {
+    // TODO: add the rest of the fields (which are required? what to do with the logo?)
     const { title, description, linkURL } = this.state;
     return (
       <form>

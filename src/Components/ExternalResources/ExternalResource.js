@@ -30,6 +30,7 @@ export default class ExternalResource extends Component {
 
     return (
       <li onClick={this.toggleCollapsed}>
+        {/* TODO: replace with a smarter way to add/validate the http prefix */}
         <a href={`https://${linkURL}` || "#"}>{title}</a>
         {collapsed || <p>{description}</p>}
       </li>

@@ -1,5 +1,6 @@
 import { gql } from "apollo-boost";
 
+// TODO: add the rest of the fields
 const createExternalResource = gql`
   mutation($title: String!, $description: String!, $linkURL: String!) {
     createExternalResource(
