@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./About.css";
 
 class About extends Component {
   constructor(props) {
@@ -11,17 +12,17 @@ class About extends Component {
   render() {
     return (
       <div>
-        <h1>Cassandra</h1>
-        <h2>About Cassandra</h2>
-        <p>
+        <h1 class="aboutTitle">Cassandra</h1>
+        <h2 class="aboutHeader">About Cassandra</h2>
+        <p class="aboutParagraph">
           The Cassandra project is being created by The Muses non-profit
           organisation with the intention of distributing educational resources
           openly without financial costs to students. This is with the aim of
           equal opportunity to education for all.
         </p>
 
-        <h2>About The Muses</h2>
-        <p>
+        <h2 class="aboutHeader">About The Muses</h2>
+        <p class="aboutParagraph">
           The Muses is a non-profit organisation that is aimed at addressing the
           economic barriers to education and the resulting socio-economic
           problems that arise when there are financial restrictions to
