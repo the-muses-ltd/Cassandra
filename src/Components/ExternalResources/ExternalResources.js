@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Query, Mutation } from "react-apollo";
 
-// import ExternalResource from "./ExternalResource";
+import ExternalResource from "./ExternalResource";
 import getExternalResources from "../../Apollo/Queries/getExternalResources";
 import createExternalResource from "../../Apollo/Mutations/createExternalResource";
 import AddResourceForm from "./AddResourceForm";
@@ -37,15 +37,19 @@ export default class ExternalResources extends Component {
           <AddResourceForm closeForm={this.toggleAddResourceForm} />
         )}
         <Query query={getExternalResources}>
-          {({ data, loading, error }) => {
-            console.log(data, loading, error);
+          {/* TODO: add error handling */}
+          {({ data, loading, refetch }) => {
             return (
-              <ul>
-                {/* {this.props.resources &&
-                  this.props.resources.map(resource => (
-                    <ExternalResource {...resource} />
-                  ))} */}
-              </ul>
+              <div>
+                {loading && "Loading..."}
+                <ul>
+                  {data && data.externalResources
+                    ? data.externalResources.map(resource => (
+                        <ExternalResource {...resource} key={resource.id} />
+                      ))
+                    : "No results"}
+                </ul>
+              </div>
             );
           }}
         </Query>

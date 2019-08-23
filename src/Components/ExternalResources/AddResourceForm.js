@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Mutation } from "react-apollo";
 
 import createExternalResource from "../../Apollo/Mutations/createExternalResource";
+import getExternalResources from "../../Apollo/Queries/getExternalResources";
 
 export default class AddResourceForm extends Component {
   constructor(props) {
@@ -50,7 +51,8 @@ export default class AddResourceForm extends Component {
         </label>
         <Mutation
           mutation={createExternalResource}
-          variables={{ title, description }}
+          variables={{ title, description, linkURL }}
+          refetchQueries={[{ query: getExternalResources }]}
         >
           {addExternalResource => (
             <button
