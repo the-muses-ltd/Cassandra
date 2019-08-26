@@ -8,5 +8,13 @@ If you need any further info or would like to be given access to be a contributo
 
 ## Github Etiquette
 
-When using GitHub, The Muses uses the following pattern: 1. Fork the repository to your GitHub account and create a new branch off the “develop” branch, naming the branch with your name and a description of what you are doing, then complete the objective of this task. 2. Push the changes to GitHub and create a pull request to The Muses repository. 3. The branch will be reviewed, if there are no changes that need to be made then the branch will be accepted into the develop branch to be tested on the staging website. 4. If code passes testing it will be merged into the master branch and will be pushed to the live site.
+When using GitHub, The Muses uses the following pattern: 
+
+1. Fork the repository to your GitHub account and create a new branch off the “develop” branch, naming the branch with your name and a description of what you are doing, then complete the objective of this task.
+
+ 2. Push the changes to your GitHub repository and then create a pull request to The Muses repository. 
+
+3. The branch will be reviewed, if there are no changes that need to be made then the branch will be accepted into the develop branch to be tested on the staging website. 
+
+4. If code passes testing it will be merged into the master branch and will be pushed to the live site.
 
