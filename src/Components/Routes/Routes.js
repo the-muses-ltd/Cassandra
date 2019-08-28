@@ -4,7 +4,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "../Home Page/Home";
 import Courses from "../Courses/Courses";
-import Recources from "../Resources/Resources";
+import ExternalRecources from "../Resources/ExternalResources";
 import About from "../About Page/About";
 
 const Routes = () => (
@@ -12,7 +12,7 @@ const Routes = () => (
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/courses" component={Courses} />
-      <Route path="/resources" component={Recources} />
+      <Route path="/resources" component={ExternalRecources} />
       <Route path="/about" component={About} />
     </Switch>
   </BrowserRouter>
