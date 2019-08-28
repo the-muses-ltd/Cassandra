@@ -4,7 +4,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "../Home Page/Home";
 import Courses from "../Courses/Courses";
-import ExternalRecources from "../Resources/ExternalResources";
+import ExternalRecources from "../ExternalResources/ExternalResources";
 import About from "../About Page/About";
 
 const Routes = () => (
