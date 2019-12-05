@@ -22,7 +22,7 @@ InVision Prototype: https://projects.invisionapp.com/prototype/Cassandra-Externa
 ![](../.gitbook/assets/gif2.gif)
 
 {% hint style="info" %}
-This design is currently only stage one of the development process \(External Resources\) which will be part of the first launch of Cassandra. 
+This design is currently only for stage one of the development process \(External Resources\) which will be part of the first launch of Cassandra. 
 {% endhint %}
 
 ## Splash Page
