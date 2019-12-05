@@ -12,3 +12,7 @@
 
 * [Schema and Database](prisma-schema/schema-and-database.md)
 
+## Design
+
+* [Wire Frames](design/wireframes.md)
+
