@@ -16,7 +16,11 @@ Analyse user feedback to update the way forward for the platform.
 
 ### Stage 4: Begin on going iterative design
 
-Using user feedback and research, continuously update and improve the platform to make education easier and more accesible for learners.
+Using user feedback and research, continuously update and improve the platform to make education easier and more accessible for learners.
+
+![](../.gitbook/assets/kanban___cassandra_2019-12-09_02.42pm.png)
+
+## 
 
 ## MVP List:
 
