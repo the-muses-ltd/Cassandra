@@ -5,6 +5,7 @@ import ExternalResource from "./ExternalResource";
 import getExternalResources from "../../Apollo/Queries/getExternalResources";
 import createExternalResource from "../../Apollo/Mutations/createExternalResource";
 import AddResourceForm from "./AddResourceForm";
+import SearchBarComponent from "./SearchBarComponent";
 
 export default class ExternalResources extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ export default class ExternalResources extends Component {
   };
 
   render() {
+    const sampleData = ["sample1", "sample2", "sample3", "sample4"];
     return (
       <div>
         <h1>External Resources</h1>
@@ -29,6 +31,9 @@ export default class ExternalResources extends Component {
           think have value and post any courses you have found to help others
           know what could help them get to that next stage of their careers.
         </p>
+
+        <SearchBarComponent content={sampleData} />
+
         {/* TODO: hide add button for unauthenticated users */}
         <button onClick={this.toggleAddResourceForm}>
           {this.state.addResourceFormOpen ? "x" : "+"}
