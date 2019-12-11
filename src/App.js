@@ -1,17 +1,22 @@
-import React from "react";
+import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Navbar from './Components/Navbar/Navbar'
+import SignIn from './Components/Authentication/SignIn';
+import SignUp from './Components/Authentication/SignUp';
 
-import logo from "./logo.svg";
-import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
-import Routes from "./Components/Routes/Routes";
-
-function App() {
-  return (
-    <div className="App">
-      <Navbar />
-      <Routes />
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+          <Switch>
+            <Route path='/signin' component={SignIn}/>
+            <Route path='/signup' component={SignUp}/>
+          </Switch>
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
-
 export default App;
