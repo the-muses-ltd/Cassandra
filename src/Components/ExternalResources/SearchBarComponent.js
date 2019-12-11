@@ -6,6 +6,10 @@ export default class SearchBarComponent extends React.Component {
     items: []
   };
 
+  submitHandler(event) {
+    event.preventDefault();
+  }
+
   filterList = event => {
     let items = this.state.initialItems;
     items = items.filter(item => {
@@ -24,7 +28,7 @@ export default class SearchBarComponent extends React.Component {
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.submitHandler}>
           <input type="text" placeholder="Search" onChange={this.filterList} />
         </form>
         <div>
