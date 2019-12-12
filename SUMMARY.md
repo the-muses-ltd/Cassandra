@@ -16,3 +16,7 @@
 
 * [Wire Frames](design/wireframes.md)
 
+## Akcnoledgements
+
+* [External Resources](akcnoledgements/external-resources.md)
+

@@ -20,8 +20,6 @@ Using user feedback and research, continuously update and improve the platform t
 
 ![](../.gitbook/assets/kanban___cassandra_2019-12-09_02.42pm.png)
 
-## 
-
 ## MVP List:
 
 ### Authentication
