@@ -16,6 +16,10 @@
 
 * [Wire Frames](design/wireframes.md)
 
+## Web Crawlers
+
+* [External Resources Web Crawlers](web-crawlers/external-resources-web-crawlers.md)
+
 ## Akcnoledgements
 
 * [External Resources](akcnoledgements/external-resources.md)
