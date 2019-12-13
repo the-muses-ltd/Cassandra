@@ -1,7 +1,7 @@
 ---
 description: >-
   The following details the structure for data output needed from Cassandra web
-  crawlers and spiders for craping external providers of open educational
+  crawlers and spiders for scraping external providers of open educational
   resources.
 ---
 
