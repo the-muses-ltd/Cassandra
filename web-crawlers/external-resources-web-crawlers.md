@@ -16,6 +16,7 @@ type ExternalResource {
   id: ID! @id
   title: String
   description: String
+  resourceProvider: String
   linkURL: String
   logoURL: String
   courseLogoURL: String
@@ -41,6 +42,7 @@ course 1:
 {
   title: String,
   description: String,
+  resourceProvider: String,
   linkURL: String,
   logoURL: String,
   courseLogoURL: String,
@@ -53,6 +55,7 @@ Course 2:
 {
   title: String,
   description: String,
+  resourceProvider: String,
   linkURL: String,
   logoURL: String,
   courseLogoURL: String,
@@ -86,6 +89,7 @@ The following are fields that are not required, but are beneficial to be scraped
 
 * title: The title of the course or resource.
 * description: Description of the content in the course or details of what is taught in the course.
+* resourceProvider: The institution or content creator of the resource.
 * linkURL: Link to be redirected to where this course is available \(specific to the course in question, not just the website itself\).
 * logoURL: Link to the logo of the institution or provider of this resource.
 * courseLogoURL: Logo/cover photo for the specific course \(if not available, can be made to be the logoURL\).
