@@ -31,11 +31,11 @@ export default class SearchBarComponent extends React.Component {
         <form onSubmit={this.submitHandler}>
           <input type="text" placeholder="Search" onChange={this.filterList} />
         </form>
-        <div>
+        <ul>
           {this.state.items.map(function(item) {
-            return <div key={item}>{item}</div>;
+            return <li key={item}>{item}</li>;
           })}
-        </div>
+        </ul>
       </div>
     );
   }

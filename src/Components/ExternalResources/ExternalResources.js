@@ -7,6 +7,8 @@ import createExternalResource from "../../Apollo/Mutations/createExternalResourc
 import AddResourceForm from "./AddResourceForm";
 import SearchBarComponent from "./SearchBarComponent";
 
+import "./ExternalResources.css";
+
 export default class ExternalResources extends Component {
   constructor(props) {
     super(props);
