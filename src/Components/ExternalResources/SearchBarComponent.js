@@ -29,7 +29,12 @@ export default class SearchBarComponent extends React.Component {
     return (
       <div>
         <form onSubmit={this.submitHandler}>
-          <input type="text" placeholder="Search" onChange={this.filterList} />
+          <input
+            type="text"
+            placeholder="Search"
+            className="posts-search-field"
+            onChange={this.filterList}
+          />
         </form>
         <div>
           {this.state.items.map(function(item) {

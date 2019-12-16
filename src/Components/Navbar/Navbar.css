@@ -2,12 +2,16 @@
   height: 3em;
   display: flex;
   font-family: "Alegreya", serif;
-  padding: 0.5em;
+  padding: 2em;
+}
+.navLogo {
+  width: 120px;
+  height: 70px;
 }
 
 .Navbar-headline {
   display: inline-block;
-  color: #7fbf7f;
+  color: #dd5583;
   text-decoration: none;
   font-size: 2em;
 }
@@ -22,15 +26,47 @@
 
 .Navbar-link {
   display: inline;
-  margin-right: 0.5em;
+  margin-right: 1.5em;
 }
 
 .Navbar-link a {
-  color: #7fbf7f;
+  color: #dd5583;
   font-size: 1.5em;
   text-decoration: none;
 }
 
 .Navbar-link a:hover {
   text-decoration: underline;
+}
+
+.button {
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  background: transparent;
+  color: #dd5583;
+  font-size: 12px;
+  border-color: #dd5583;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 22px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+  text-decoration: none;
+}
+.button:hover {
+  color: white;
+  /* need it to overwrite css to white */
+  background: #dd5583;
+  border-color: 222222;
+  transition: all 0.2s linear;
+}
+.Navbar-link a:hover {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+.button:active {
+  border-radius: 22px;
 }

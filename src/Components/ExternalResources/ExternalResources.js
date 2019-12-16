@@ -13,7 +13,8 @@ export default class ExternalResources extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      addResourceFormOpen: false
+      addResourceFormOpen: false,
+      search: ""
     };
   }
   toggleAddResourceForm = () => {
@@ -28,18 +29,16 @@ export default class ExternalResources extends Component {
       <div>
         <h1>External Resources</h1>
         <p>
-          Search here to find courses to start learning for your new career or
-          to improve your skills at your current job. Vote for any recources you
-          think have value and post any courses you have found to help others
-          know what could help them get to that next stage of their careers.
+          Find any course or learn any skill you can imagine here, no paid
+          courses will feature here.
         </p>
 
         <SearchBarComponent content={sampleData} />
 
         {/* TODO: hide add button for unauthenticated users */}
-        <button onClick={this.toggleAddResourceForm}>
+        {/* <button onClick={this.toggleAddResourceForm}>
           {this.state.addResourceFormOpen ? "x" : "+"}
-        </button>
+        </button> */}
         {this.state.addResourceFormOpen && (
           <AddResourceForm closeForm={this.toggleAddResourceForm} />
         )}

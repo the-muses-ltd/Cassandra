@@ -1,7 +1,9 @@
 .App {
   text-align: center;
   /* background-color: #2D2F36; */
-  background-color: #030303;
+  /* background-color: #030303; */
+  background-color: #222222;
+  background-size: cover;
 }
 
 .App-logo {
@@ -16,9 +18,137 @@
   animation: fade-in 4s cubic-bezier(0.39, 0.575, 0.565, 1) 2s both;
 }
 
+.home-search-field {
+  margin-left: 10%;
+  width: 550%;
+  height: 25px;
+  top: 105px;
+  /* position: fixed; */
+  z-index: 500;
+  /* width: 30%; */
+  margin-top: 40px;
+  margin-bottom: 10px;
+  display: flex;
+  margin-left: -238%;
+  height: 25px;
+  border: 2px solid #dd5583;
+  border-radius: 20px;
+  padding-left: 10px;
+
+  /* width: 100%; */
+  padding: 12px 24px;
+
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #dd5583;
+  background-color: transparent;
+  /*         background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg); */
+
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 98%;
+  border-radius: 50px;
+  border: 1px solid #dd5583;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+
+  &::placeholder {
+    color: color(#dd5583 a(0.8));
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+}
+
+.home-search-field:hover {
+  padding: 12px 0;
+  outline: 0;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #dd5583;
+  border-radius: 0;
+  background-position: 100% center;
+}
+
+.home-search-field:focus {
+  padding: 12px 0;
+  outline: 0;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #dd5583;
+  border-radius: 0;
+  background-position: 100% center;
+}
+
+.posts-search-field {
+  margin-left: 10%;
+  width: 76%;
+  height: 25px;
+  top: 105px;
+  /* position: fixed; */
+  z-index: 500;
+  /* width: 30%; */
+  margin-top: 40px;
+  margin-bottom: 10px;
+  display: flex;
+
+  height: 25px;
+  border: 2px solid #dd5583;
+  border-radius: 20px;
+  padding-left: 10px;
+
+  /* width: 100%; */
+  padding: 12px 24px;
+
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #dd5583;
+  background-color: transparent;
+  /*         background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg); */
+
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 98%;
+  border-radius: 50px;
+  border: 1px solid #dd5583;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+
+  &::placeholder {
+    color: color(#dd5583 a(0.8));
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+}
+
+.posts-search-field:hover {
+  padding: 12px 0;
+  outline: 0;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #dd5583;
+  border-radius: 0;
+  background-position: 100% center;
+}
+
+.posts-search-field:focus {
+  padding: 12px 0;
+  outline: 0;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #dd5583;
+  border-radius: 0;
+  background-position: 100% center;
+}
+
 .App-header {
   background-color: #2d2f36;
-  background-color: #030303;
+  background-color: #222222;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,21 +162,178 @@
   color: #61dafb;
 }
 
+.card {
+  background-color: #fff;
+  width: 300px;
+  height: 500px;
+  margin-left: 10px;
+  margin-top: 15px;
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 2rem;
+  box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
+}
+.card .banner {
+  /* background-image: url("https://images.unsplash.com/photo-1545703549-7bdb1d01b734?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 11rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.card .banner svg {
+  background-color: #fff;
+  width: 8rem;
+  height: 8rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  transform: translateY(50%);
+  transition: transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.card .banner svg:hover {
+  transform: translateY(50%) scale(1.3);
+}
+.card .menu {
+  width: 100%;
+  height: 5.5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+  box-sizing: border-box;
+}
+.card .menu .opener {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  border-radius: 50%;
+  transition: background-color 100ms ease-in-out;
+}
+.card .menu .opener:hover {
+  background-color: #f2f2f2;
+}
+.card .menu .opener span {
+  background-color: #404040;
+  width: 0.4rem;
+  height: 0.4rem;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 0.2rem);
+  border-radius: 50%;
+}
+.card .menu .opener span:nth-child(1) {
+  top: 0.45rem;
+}
+.card .menu .opener span:nth-child(2) {
+  top: 1.05rem;
+}
+.card .menu .opener span:nth-child(3) {
+  top: 1.65rem;
+}
+.card h2.name {
+  text-align: center;
+  padding: 0 2rem 0.5rem;
+  margin: 0;
+}
+.card .title {
+  color: #a0a0a0;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0 2rem 1.2rem;
+}
+.card .actions {
+  padding: 0 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  order: 99;
+}
+.card .actions .follow-info {
+  padding: 0 0 1rem;
+  display: flex;
+}
+.card .actions .follow-info h2 {
+  text-align: center;
+  width: 50%;
+  margin: 0;
+  box-sizing: border-box;
+}
+.card .actions .follow-info h2 a {
+  text-decoration: none;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  transition: background-color 100ms ease-in-out;
+}
+.card .actions .follow-info h2 a span {
+  color: #1c9eff;
+  font-weight: bold;
+  transform-origin: bottom;
+  transform: scaleY(1.3);
+  transition: color 100ms ease-in-out;
+}
+.card .actions .follow-info h2 a small {
+  color: #afafaf;
+  font-size: 0.85rem;
+  font-weight: normal;
+}
+.card .actions .follow-info h2 a:hover {
+  background-color: #f2f2f2;
+}
+.card .actions .follow-info h2 a:hover span {
+  color: #007ad6;
+}
+.card .actions .follow-btn button {
+  color: inherit;
+  font: inherit;
+  font-weight: bold;
+  background-color: #ffd01a;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 1.5rem/50%;
+  transition: background-color 100ms ease-in-out,
+    transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.card .actions .follow-btn button:hover {
+  background-color: #efb10a;
+  transform: scale(1.1);
+}
+.card .actions .follow-btn button:active {
+  background-color: #e8a200;
+  transform: scale(1);
+}
+.card .desc {
+  text-align: justify;
+  padding: 0 2rem 2.5rem;
+  order: 100;
+  height: 50px;
+}
+
 .landingTitle {
-  color: #7fbf7f;
-  font-family: "Alegreya", serif;
+  color: #dd5583;
+  /* font-family: "Alegreya", serif; */
+  font-family: futura;
 }
 
 .landingPara {
   max-width: 60%;
-  color: #7fbf7f;
-  font-family: "Alegreya", serif;
-  padding-bottom: 150px;
+  color: #dd5583;
+  /* font-family: "Alegreya", serif; */
+  font-family: futura;
+  padding-bottom: 20px;
 }
 
 .landingParaLink {
   max-width: 60%;
-  color: #7fbf7f;
+  color: #dd5583;
   font-family: "Alegreya", serif;
   padding-bottom: 150px;
   text-decoration: underline;
@@ -60,12 +347,12 @@
 
 .projectSubHead {
   width: 100%;
-  color: #7fbf7f;
+  color: #dd5583;
   font-family: "Alegreya", serif;
 }
 
 .projectLogoTitle {
-  color: #7fbf7f;
+  color: #dd5583;
   font-family: "Alegreya", serif;
 }
 /* .projectLogoContainer {
