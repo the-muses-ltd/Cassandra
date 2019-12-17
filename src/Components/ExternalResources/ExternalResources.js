@@ -24,9 +24,16 @@ export default class ExternalResources extends Component {
   };
 
   render() {
-    const sampleData = ["sample1", "sample2", "sample3", "sample4"];
+    const sampleData = [
+      "sample1",
+      "sample2",
+      "sample3",
+      "sample4",
+      "sample5",
+      "sample6"
+    ];
     return (
-      <div>
+      <div class="pagebody">
         <h1>External Resources</h1>
         <p>
           Find any course or learn any skill you can imagine here, no paid

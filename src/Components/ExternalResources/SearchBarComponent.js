@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./SearchBarComponent.css";
+
 export default class SearchBarComponent extends React.Component {
   state = {
     initialItems: [],
@@ -36,9 +38,22 @@ export default class SearchBarComponent extends React.Component {
             onChange={this.filterList}
           />
         </form>
-        <div>
+        <div class="row">
           {this.state.items.map(function(item) {
-            return <div key={item}>{item}</div>;
+            return (
+              <div class="column">
+                <div class="card">
+                  <img
+                    src="https://pixselo.com/wp-content/uploads/2018/03/dummy-placeholder-image-400x400.jpg"
+                    alt="Avatar"
+                    class="cardImg"
+                  ></img>
+                  <div key={item} class="container">
+                    {item}
+                  </div>
+                </div>
+              </div>
+            );
           })}
         </div>
       </div>
