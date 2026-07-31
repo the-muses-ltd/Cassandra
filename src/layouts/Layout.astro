@@ -1,0 +1,94 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/paths', label: 'Paths' },
+  { href: '/library', label: 'Library' },
+  { href: '/contribute', label: 'Contribute' },
+  { href: '/about', label: 'About' },
+];
+
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isCurrent = (href: string) =>
+  href === '/' ? currentPath === '/' : currentPath === href || currentPath.startsWith(href + '/');
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#0f766e" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/" aria-label="Cassandra, home">
+          <svg viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <rect width="64" height="64" rx="14" fill="#0f766e" />
+            <path
+              d="M32 19c-4.5-3-11-4-16-3v27c5-1 11.5 0 16 3 4.5-3 11-4 16-3V16c-5-1-11.5 0-16 3z"
+              fill="none"
+              stroke="#f8f6f0"
+              stroke-width="3"
+              stroke-linejoin="round"
+            />
+            <path d="M32 19v27" stroke="#f8f6f0" stroke-width="3" stroke-linecap="round" />
+            <circle cx="32" cy="10.5" r="2.6" fill="#f8f6f0" />
+          </svg>
+          <span>Cassandra</span>
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          {
+            navItems.map((item) => (
+              <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          A project of <a href="https://the-muses.org">The Muses</a>, a UK non-profit.
+          Free education for everyone, forever.
+        </p>
+        <p>
+          <a href="https://github.com/the-muses-ltd/Cassandra">Source on GitHub</a> · MIT licensed
+        </p>
+      </div>
+    </footer>
+
+    <script is:inline>
+      // Offline support: once visited, pages keep working on flaky connections.
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>

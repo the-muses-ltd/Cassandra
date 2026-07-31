@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const exampleResource = `---
+title: Intro to SQL — Querying and managing data
+provider: Khan Academy
+url: https://www.khanacademy.org/computing/computer-programming/sql
+description: Interactive SQL taught in the browser — queries, aggregation,
+  joins and modifying databases — with talk-throughs and challenges.
+subjects: [data, programming]
+level: beginner
+format: interactive
+language: en
+---`;
+---
+
+<Layout
+  title="Contribute — Cassandra Open Education"
+  description="Cassandra is built by people passing on the route they took. Add a resource, improve a path, or vet links — no coding required for most of it."
+>
+  <section class="section">
+    <div class="container prose">
+      <h1>Contribute</h1>
+      <p class="lede">
+        Every path on Cassandra exists because someone who found the way passed the route on. All
+        the content is plain text files in a
+        <a href="https://github.com/the-muses-ltd/Cassandra">public GitHub repository</a> — if you
+        can edit a text file, you can contribute.
+      </p>
+
+      <h2>The quality bar</h2>
+      <p>Before proposing a resource, check it against the bar every reviewer will use:</p>
+      <ul>
+        <li>
+          <strong>Genuinely free to learn from.</strong> Free trials, "first module free" and
+          audit-only-with-nagging don't qualify. A free account requirement or an optional paid
+          certificate is acceptable if we say so in the resource's notes.
+        </li>
+        <li>
+          <strong>Excellent, not merely acceptable.</strong> The library is a shortlist, not a
+          search engine. Would you recommend it to a friend over every alternative?
+        </li>
+        <li>
+          <strong>Likely to last.</strong> Established institutions, foundations and long-running
+          community projects — not a personal blog that may vanish next year.
+        </li>
+      </ul>
+
+      <h2>Add a resource</h2>
+      <p>
+        A resource is one markdown file in <code>src/content/resources/</code>. Copy an existing one
+        or start from this template, then open a pull request:
+      </p>
+      <pre><code>{exampleResource}</code></pre>
+      <p>
+        The build validates every field, and a maintainer reviews every submission before it goes
+        live — that review, in the open, is our whole editorial process.
+      </p>
+
+      <h2>Improve or propose a path</h2>
+      <p>
+        Paths live in <code>src/content/paths/</code> — ordered stages, each with resources, a
+        rationale and a checkpoint. The most valuable contributions come from people who recently
+        walked the route themselves: you still remember where you got lost.
+      </p>
+      <p>Paths we want next: mathematics from arithmetic to calculus, basic digital literacy, and
+        paths in languages other than English.</p>
+
+      <h2>No pull request required</h2>
+      <p>
+        Not comfortable with GitHub?
+        <a href="https://github.com/the-muses-ltd/Cassandra/issues">Open an issue</a> describing the
+        resource or the problem, and someone will turn it into a change. Link-checking, testing
+        paths as a real learner, and translating are all contributions we need just as much as code.
+      </p>
+    </div>
+  </section>
+</Layout>

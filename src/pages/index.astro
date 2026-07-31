@@ -1,0 +1,118 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import PathCard from '../components/PathCard.astro';
+
+const paths = (await getCollection('paths')).sort((a, b) => a.data.order - b.data.order);
+const resourceCount = (await getCollection('resources')).length;
+---
+
+<Layout
+  title="Cassandra Open Education — free, structured paths to real skills"
+  description="Free education is everywhere; a map through it is not. Cassandra gives you curated, stage-by-stage learning paths through the world's best free resources — no accounts, no fees, no catch."
+>
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Free education, with a map</p>
+      <h1>The world's best free education. In the right order.</h1>
+      <p class="lede">
+        Everything you need to learn a real skill already exists online, free — from Harvard, MIT,
+        the BBC, Khan Academy and volunteer-built curricula. What's missing is the map: what to
+        learn, in what order, and how to prove it. Cassandra is that map.
+      </p>
+      <div class="actions">
+        <a class="button" href="/paths">Choose a path</a>
+        <a class="button secondary" href="/library">Browse the library</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="how-heading">
+    <div class="container">
+      <h2 id="how-heading">How it works</h2>
+      <ol class="step-list">
+        <li>
+          <h3>Pick a path</h3>
+          <p>
+            Each path is an ordered route through hand-vetted free resources, with an honest
+            estimate of the effort involved.
+          </p>
+        </li>
+        <li>
+          <h3>Work the stages</h3>
+          <p>
+            Every stage tells you what to use and why. Your progress is saved privately on your own
+            device — no account, ever.
+          </p>
+        </li>
+        <li>
+          <h3>Prove it as you go</h3>
+          <p>
+            Every stage ends with a checkpoint: something concrete you build or write. By the end
+            you have a portfolio, not just certificates.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="paths-heading">
+    <div class="container">
+      <h2 id="paths-heading">The paths</h2>
+      <p class="lede">
+        Four to start with — chosen for employability without formal accreditation. More are on the
+        way, and <a href="/contribute">you can help write them</a>.
+      </p>
+      <div class="grid wide" style="margin-top: 1.5rem;">
+        {paths.map((path) => <PathCard path={path} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="principles-heading">
+    <div class="container">
+      <h2 id="principles-heading">What we promise</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Free means free</h3>
+          <p>
+            Every resource here is genuinely free to learn from. Where a free account is needed or a
+            paid certificate exists, we say so up front.
+          </p>
+        </div>
+        <div class="card">
+          <h3>No accounts, no tracking</h3>
+          <p>
+            No sign-up, no analytics, no data collection. Progress lives in your browser and belongs
+            to you.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Built for slow connections</h3>
+          <p>
+            The whole site is static, tiny and works offline after your first visit — because the
+            people who need free education most often have the worst internet.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Open and community-run</h3>
+          <p>
+            The {resourceCount} resources and every path are plain text files in a public
+            repository. Anyone can propose an addition; every change is reviewed in the open.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="contribute-heading">
+    <div class="container prose">
+      <h2 id="contribute-heading">Know a great free resource?</h2>
+      <p>
+        Cassandra grows the way the best free curricula always have: people who learned something
+        pass the route on. Adding a resource is a small text file and a pull request.
+      </p>
+      <a class="button" href="/contribute">How to contribute</a>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,17 @@
+{
+  "name": "Cassandra Open Education",
+  "short_name": "Cassandra",
+  "description": "Free, structured learning paths through the world's best free educational resources.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9f6",
+  "theme_color": "#0f766e",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

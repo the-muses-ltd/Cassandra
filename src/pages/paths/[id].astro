@@ -1,0 +1,159 @@
+---
+import { getCollection, getEntries } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const paths = await getCollection('paths');
+  return paths.map((path) => ({ params: { id: path.id }, props: { path } }));
+}
+
+const { path } = Astro.props;
+const { title, tagline, audience, outcome, effort, stages } = path.data;
+
+// Resolve each stage's resource references up front so the template below
+// stays simple. Build fails loudly if a path names a resource that no longer
+// exists — that's our content integrity check.
+const stagesWithResources = await Promise.all(
+  stages.map(async (stage) => ({
+    ...stage,
+    resolved: await getEntries(stage.resources),
+  }))
+);
+---
+
+<Layout title={`${title} — Cassandra Open Education`} description={tagline}>
+  <section class="section" data-path-id={path.id} id="path-root">
+    <div class="container">
+      <p class="eyebrow">Learning path</p>
+      <h1>{title}</h1>
+      <p class="lede">{tagline}</p>
+
+      <div class="path-facts">
+        <div class="card">
+          <p class="label">Who this is for</p>
+          <p>{audience}</p>
+        </div>
+        <div class="card">
+          <p class="label">Where it gets you</p>
+          <p>{outcome}</p>
+        </div>
+        <div class="card">
+          <p class="label">Honest effort estimate</p>
+          <p>{effort}</p>
+        </div>
+      </div>
+
+      <div class="progress-panel">
+        <p style="margin: 0;">
+          <strong id="progress-text">0 of {stages.length} stages complete</strong>
+          <span class="note" style="color: var(--muted); font-size: 0.9rem;">
+            — saved only in this browser, no account involved</span
+          >
+        </p>
+        <div
+          class="bar"
+          role="progressbar"
+          aria-labelledby="progress-text"
+          aria-valuemin="0"
+          aria-valuemax={String(stages.length)}
+          aria-valuenow="0"
+          id="progress-bar"
+        >
+          <div class="fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <div>
+        {
+          stagesWithResources.map((stage, index) => (
+            <section class="stage" data-stage={String(index)} aria-labelledby={`stage-${index}`}>
+              <span class="stage-number" aria-hidden="true">
+                {index + 1}
+              </span>
+              <h2 id={`stage-${index}`}>{stage.title}</h2>
+              <p style="max-width: var(--prose);">{stage.description}</p>
+              <div class="resources">
+                {stage.resolved.map((resource) => (
+                  <div class="resource-line">
+                    <div class="title-row">
+                      <a href={resource.data.url} rel="noopener">
+                        {resource.data.title}
+                      </a>
+                      <span class="provider">{resource.data.provider}</span>
+                      <span class="badge">{resource.data.format}</span>
+                    </div>
+                    {resource.data.notes && <p class="note">{resource.data.notes}</p>}
+                  </div>
+                ))}
+              </div>
+              <div class="callout" style="max-width: var(--prose);">
+                <strong>Checkpoint:</strong> {stage.checkpoint}
+              </div>
+              <label class="stage-toggle">
+                <input type="checkbox" data-stage-toggle={String(index)} />
+                Mark this stage complete
+              </label>
+            </section>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Per-path progress, stored locally. Key: cassandra:progress:<path-id>,
+    // value: JSON array of completed stage indexes.
+    const root = document.getElementById('path-root');
+    if (root instanceof HTMLElement && root.dataset.pathId) {
+      const key = `cassandra:progress:${root.dataset.pathId}`;
+      const toggles = Array.from(
+        root.querySelectorAll<HTMLInputElement>('input[data-stage-toggle]')
+      );
+      const text = document.getElementById('progress-text');
+      const bar = document.getElementById('progress-bar');
+      const fill = document.getElementById('progress-fill');
+      const total = toggles.length;
+
+      const load = (): number[] => {
+        try {
+          const raw = localStorage.getItem(key);
+          const parsed = raw ? JSON.parse(raw) : [];
+          return Array.isArray(parsed) ? parsed.filter((n) => Number.isInteger(n)) : [];
+        } catch {
+          return [];
+        }
+      };
+
+      const render = (done: number[]) => {
+        toggles.forEach((toggle) => {
+          const index = Number(toggle.dataset.stageToggle);
+          const isDone = done.includes(index);
+          toggle.checked = isDone;
+          toggle.closest('.stage')?.classList.toggle('done', isDone);
+        });
+        if (text) text.textContent = `${done.length} of ${total} stages complete`;
+        if (bar) bar.setAttribute('aria-valuenow', String(done.length));
+        if (fill instanceof HTMLElement) {
+          fill.style.width = total ? `${(done.length / total) * 100}%` : '0%';
+        }
+      };
+
+      toggles.forEach((toggle) => {
+        toggle.addEventListener('change', () => {
+          const index = Number(toggle.dataset.stageToggle);
+          const done = load().filter((n) => n !== index);
+          if (toggle.checked) done.push(index);
+          try {
+            localStorage.setItem(key, JSON.stringify(done.sort((a, b) => a - b)));
+          } catch {
+            // Private browsing or full storage: the page still works, the
+            // checkmarks just won't survive a reload.
+          }
+          render(load());
+        });
+      });
+
+      render(load());
+    }
+  </script>
+</Layout>
