@@ -1,0 +1,9 @@
+# Netlify build settings for the Astro site. This file overrides any
+# dashboard configuration left over from the 2019 create-react-app build,
+# which published from build/ instead of dist/.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
