@@ -6,21 +6,52 @@
 <title>Not found — Cassandra</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <style>
-  body {
-    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
-    background: #f8f6f0; color: #1c2b2a;
-    font-family: ui-serif, Georgia, serif; text-align: center; padding: 1.5rem;
+  :root {
+    --bg: #f8f6ef; --ink: #1f2b2a; --muted: #5b6a67;
+    --accent: #0f766e; --accent-soft: rgba(15,118,110,0.09);
+    --gold: #8a5c06; --gold-soft: rgba(138,92,6,0.10);
+    --rule: #ddd7c6; --card: #fffdf8;
   }
-  @media (prefers-color-scheme: dark) { body { background: #131b1a; color: #e8ece9; } }
-  a { color: #0f766e; }
-  @media (prefers-color-scheme: dark) { a { color: #2dd4bf; } }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101817; --ink: #e9ece8; --muted: #9db0ab;
+      --accent: #34d3bd; --accent-soft: rgba(52,211,189,0.10);
+      --gold: #d9a94e; --gold-soft: rgba(217,169,78,0.10);
+      --rule: #2a3634; --card: #17211f;
+    }
+  }
+  body {
+    margin: 0; min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    background:
+      radial-gradient(60rem 30rem at 50% -10rem, var(--accent-soft), transparent 70%),
+      radial-gradient(40rem 22rem at 85% -6rem, var(--gold-soft), transparent 70%),
+      var(--bg);
+    color: var(--ink);
+    font-family: ui-serif, "Iowan Old Style", Georgia, serif;
+    text-align: center; padding: 1.5rem;
+  }
+  .fish { color: var(--gold); margin-bottom: 1.2rem; }
+  h1 { font-size: clamp(1.9rem, 6vw, 2.6rem); letter-spacing: -0.015em; margin: 0 0 0.6rem; }
+  p { color: var(--muted); margin: 0.4rem 0 1.6rem; }
+  a.home {
+    display: inline-block;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.9rem; font-weight: 700; text-decoration: none;
+    color: var(--accent); border: 1px solid var(--rule); background: var(--card);
+    border-radius: 999px; padding: 0.55rem 1.3rem;
+  }
+  a.home:hover { border-color: var(--accent); }
 </style>
 </head>
 <body>
   <div>
-    <h1>That page is gone.</h1>
+    <div class="fish" aria-hidden="true">
+      <svg width="44" height="24" viewBox="0 0 34 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9c4-5.5 10-7.5 16-6 4.5 1.1 8 3.5 10.5 6C26 11.5 22.5 13.9 18 15 12 16.5 6 14.5 2 9Z"/><path d="M28.5 9 33 4.5v9L28.5 9Z"/><circle cx="8.5" cy="8" r="0.5" fill="currentColor"/></svg>
+    </div>
+    <h1>That page swam away.</h1>
     <p>Cassandra is one page now — and it's a good one.</p>
-    <p><a href="/">Go there →</a></p>
+    <a class="home" href="/">Go there →</a>
   </div>
 </body>
 </html>
