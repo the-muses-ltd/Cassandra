@@ -1,6 +1,6 @@
 # Contributing to Cassandra
 
-Cassandra is one HTML page — [`site/index.html`](site/index.html) — that
+Cassandra is one HTML page, [`site/index.html`](site/index.html), that
 teaches people how to learn anything online, free. Keeping one page true is a
 job many hands can share, and you do not need to be a developer to help.
 
@@ -11,21 +11,21 @@ job many hands can share, and you do not need to be a developer to help.
 - **Clearer sentences.** Many readers use English as a second language. If a
   sentence made you read it twice, simplifying it is a real contribution.
 - **Translations.** A translated copy (e.g. `site/es/index.html`) helps a
-  whole language community at once. Translate meaning, not words — and keep
-  the short list's caveats accurate for your region.
+  whole language community at once. Translate meaning rather than words, and
+  keep the short list's caveats accurate for your region.
 - **Changes to the short list.** See the bar below. Arguing to *remove* an
   entry that no longer meets it is as valuable as adding one.
 
 ## The bar for the short list
 
-The list is deliberately short — it's a set of anchors, not a directory
-(being a directory is the thing Cassandra stopped doing). Every entry must be:
+The list is short on purpose: it's a set of anchors, not a directory. Being a
+directory is the thing Cassandra stopped doing. Every entry must be:
 
 1. **Free as a mission, not as a funnel.** The entire skill must be learnable
    without paying. Free accounts are fine; optional paid certificates must be
    called out; free trials and nagging audit tiers disqualify.
 2. **Institutionally durable.** Run by a non-profit, university, public
-   broadcaster or long-lived community project — something that has been free
+   broadcaster or long-lived community project: something that has been free
    for years and has a reason to stay that way.
 3. **Broad enough to matter.** It should take a learner a real distance, not
    cover one narrow topic. One line of description must be enough to know
@@ -37,7 +37,7 @@ There is no build step. Edit the HTML, open the file in a browser to check
 it, and open a pull request:
 
 1. Fork the repository and edit `site/index.html` (any text editor works).
-2. Preview by opening the file directly in your browser — what you see is
+2. Preview by opening the file directly in your browser; what you see is
    exactly what ships.
 3. Open a pull request describing what you changed and why.
 

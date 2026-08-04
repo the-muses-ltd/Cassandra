@@ -1,4 +1,4 @@
-# The site is a plain static page in site/ — nothing to build. The explicit
+# The site is a plain static page in site/ with nothing to build. The explicit
 # no-op command overrides any build command left in the Netlify dashboard
 # from earlier eras of this repository.
 [build]

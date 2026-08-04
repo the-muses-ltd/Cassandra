@@ -19,19 +19,19 @@ roughly a third built when development stopped.
 ## The assessment
 
 **The mission still stands.** Economic barriers to education are as real as
-they were in 2019, and The Muses' purpose — free access to education for all
-— has not aged.
+they were in 2019, and The Muses' purpose, free access to education for all,
+has not aged.
 
 **The 2019 product design has.** Its core value was *discovery*: helping
 learners find free resources. That problem has since been largely solved by
 search engines, established directories (Class Central, OER Commons), the
-providers' own reach, and — decisively — AI assistants that answer "how do I
+providers' own reach, and, decisively, AI assistants that answer "how do I
 learn X for free?" instantly and personally. A votes-and-comments link
 directory enters that field with no advantage.
 
 **What remains genuinely unsolved is guidance.** Free content is abundant;
 free *structure* is scarce. Learners without educated families, mentors or
-money don't lack links — they lack a trustworthy answer to "what do I learn,
+money don't lack links. They lack a trustworthy answer to "what do I learn,
 in what order, and how do I prove it to an employer?" The enormous popularity
 of community-maintained route maps (roadmap.sh, free-programming-books,
 Teach Yourself CS) is evidence of how strong that need is.
@@ -45,7 +45,7 @@ rewrite in any case.
 Rebuild from scratch as a **static, content-first learning-paths site**:
 
 - **Paths, not a directory.** Ordered stages through hand-vetted free
-  resources, each with a rationale and a portfolio *checkpoint* — keeping the
+  resources, each with a rationale and a portfolio *checkpoint*, keeping the
   original roadmap's vocational, portfolio-based vision.
 - **Git is the backend.** Content is schema-validated markdown; community
   contribution happens by pull request; the review that used to be
@@ -53,7 +53,7 @@ Rebuild from scratch as a **static, content-first learning-paths site**:
   queue, no database to run or secure.
 - **Static and tiny.** Near-zero hosting cost (sustainable for a non-profit
   with no income by design), fast on cheap devices, offline-capable via a
-  service worker — because the learners the mission targets often have the
+  service worker, because the learners the mission targets often have the
   worst connections.
 - **Progress in localStorage.** The one interactive feature learners need,
   with zero privacy cost.
@@ -72,7 +72,7 @@ The 2019 implementation is preserved in git history for anyone curious.
 Days after the learning-paths prototype above was built, The Muses took the
 assessment to its honest conclusion and went a step further.
 
-**The paths site was still curation — fish, nicely arranged.** Every path it
+**The paths site was still curation: fish, nicely arranged.** Every path it
 contained is something a learner can now generate on demand, personalized to
 their goal, hours and prior knowledge, in one conversation with a free AI
 assistant. A hand-written generic path cannot beat that, and maintaining a
@@ -81,21 +81,20 @@ value was much smaller than a site: the *method* for structuring your own
 free education, and a *short list* of institutions whose material is free as
 a mission rather than as a funnel. That fits on one page.
 
-**The decision:** replace the site with a single self-contained HTML page —
-a teach-a-person-to-fish page — and delete the toolchain entirely. No
+**The decision:** replace the site with a single self-contained HTML page, a
+teach-a-person-to-fish page, and delete the toolchain entirely. No
 dependencies, no build step, no JavaScript, no tracking. The 2019 app's 391
 open security alerts were a lesson in what unmaintained web applications
 become; a page with no dependency tree cannot rot that way, and this project
 has already proven it may sit unattended for years.
 
-**Where the effort goes instead: adaptive learning.** Static content — even
-perfectly curated static content — teaches everyone the same material in the
-same order at the same pace. The remaining, real inequity is access to
-*teaching*: instruction that diagnoses, paces and remediates like a tutor
-does. Software with that behavior exists but is overwhelmingly paid, narrow
-or piloted — not freely and widely available. Making it so is the hard
-problem worthy of The Muses' building energy, and the subject of its next
-chapter.
+**Where the effort goes instead: adaptive learning.** Static content, even
+perfectly curated, teaches everyone the same material in the same order at
+the same pace. The remaining, real inequity is access to *teaching*:
+instruction that diagnoses, paces and remediates like a tutor does. Software
+with that behavior exists but is overwhelmingly paid, narrow or piloted, not
+freely and widely available. Making it so is the hard problem worthy of The
+Muses' building energy, and the subject of its next chapter.
 
 The learning-paths prototype (Astro, four paths, 24 vetted resources) is
 preserved in this branch's git history alongside the 2019 app.
