@@ -24,8 +24,11 @@ jobs:
         with:
           # Education sites often rate-limit or bot-block; accept those
           # status codes rather than failing on a liveness false alarm.
+          # --root-dir lets lychee resolve the page's root-relative internal
+          # links (/, /favicon.svg) against site/ when checking local files.
           args: >-
             --no-progress
+            --root-dir ${{ github.workspace }}/site
             --accept 200..=204,206,301,302,303,307,308,403,429,999
             site/index.html site/404.html README.md CONTRIBUTING.md
           fail: true
