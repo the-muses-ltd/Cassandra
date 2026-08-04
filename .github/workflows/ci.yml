@@ -1,0 +1,34 @@
+# The only automation left: make sure the page's links stay alive.
+# An evergreen page's one failure mode is link rot, so this runs on every
+# change and on a monthly schedule.
+name: Check links
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+  schedule:
+    - cron: "0 6 3 * *" # monthly
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check links in the page and README
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Education sites often rate-limit or bot-block; accept those
+          # status codes rather than failing on a liveness false alarm.
+          # --root-dir lets lychee resolve the page's root-relative internal
+          # links (/, /favicon.svg) against site/ when checking local files.
+          args: >-
+            --no-progress
+            --root-dir ${{ github.workspace }}/site
+            --accept 200..=204,206,301,302,303,307,308,403,429,999
+            site/index.html site/404.html README.md CONTRIBUTING.md
+          fail: true

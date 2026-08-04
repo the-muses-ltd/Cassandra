@@ -1,0 +1,11 @@
+# The site is a plain static page in site/ with nothing to build. The explicit
+# no-op command overrides any build command left in the Netlify dashboard
+# from earlier eras of this repository.
+[build]
+  command = "echo 'No build needed: Cassandra is a static page in site/'"
+  publish = "site"
+  # Deploy previews are ON while the redesigned page is being verified.
+  # To switch them off again, uncomment the ignore command below: Netlify
+  # skips a build when it exits 0, which this does for every context
+  # except production (master).
+  # ignore = "test \"$CONTEXT\" != \"production\""
