@@ -1,9 +1,6 @@
-# Netlify build settings for the Astro site. This file overrides any
-# dashboard configuration left over from the 2019 create-react-app build,
-# which published from build/ instead of dist/.
+# The site is a plain static page in site/ — nothing to build. The explicit
+# no-op command overrides any build command left in the Netlify dashboard
+# from earlier eras of this repository.
 [build]
-  command = "npm run build"
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "22"
+  command = "echo 'No build needed: Cassandra is a static page in site/'"
+  publish = "site"

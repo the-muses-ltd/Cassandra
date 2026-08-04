@@ -1,75 +1,58 @@
 # Contributing to Cassandra
 
-Thank you — Cassandra only works because people who found the way pass the
-route on. You do not need to be a developer to contribute.
+Cassandra is one HTML page — [`site/index.html`](site/index.html) — that
+teaches people how to learn anything online, free. Keeping one page true is a
+job many hands can share, and you do not need to be a developer to help.
 
-## The quality bar
+## What's welcome
 
-Every resource proposal is reviewed against three questions:
+- **Broken or moved links.** The most valuable fix there is. A monthly link
+  check runs automatically, but a human report beats it every time.
+- **Clearer sentences.** Many readers use English as a second language. If a
+  sentence made you read it twice, simplifying it is a real contribution.
+- **Translations.** A translated copy (e.g. `site/es/index.html`) helps a
+  whole language community at once. Translate meaning, not words — and keep
+  the short list's caveats accurate for your region.
+- **Changes to the short list.** See the bar below. Arguing to *remove* an
+  entry that no longer meets it is as valuable as adding one.
 
-1. **Genuinely free to learn from?** Free trials, "first module free", and
-   audit-tiers that nag you into paying don't qualify. A free account
-   requirement or an optional paid certificate is fine **if disclosed in the
-   resource's `notes` field**.
-2. **Excellent, not merely acceptable?** The library is a shortlist, not a
-   search engine. Only propose something you would recommend to a friend over
-   every alternative.
-3. **Likely to last?** Established institutions, foundations and long-running
-   community projects — not content that may vanish next year.
+## The bar for the short list
 
-## Adding a resource
+The list is deliberately short — it's a set of anchors, not a directory
+(being a directory is the thing Cassandra stopped doing). Every entry must be:
 
-Create one markdown file in `src/content/resources/`, named after the
-resource in kebab-case (e.g. `khan-academy-sql.md`):
+1. **Free as a mission, not as a funnel.** The entire skill must be learnable
+   without paying. Free accounts are fine; optional paid certificates must be
+   called out; free trials and nagging audit tiers disqualify.
+2. **Institutionally durable.** Run by a non-profit, university, public
+   broadcaster or long-lived community project — something that has been free
+   for years and has a reason to stay that way.
+3. **Broad enough to matter.** It should take a learner a real distance, not
+   cover one narrow topic. One line of description must be enough to know
+   when to use it.
 
-```markdown
----
-title: Intro to SQL — Querying and managing data
-provider: Khan Academy
-url: https://www.khanacademy.org/computing/computer-programming/sql
-description: Interactive SQL taught in the browser — queries, aggregation,
-  joins and modifying databases — with talk-throughs and challenges.
-subjects: [data, programming]
-level: beginner        # beginner | intermediate | advanced | all
-format: interactive    # course | book | video | interactive | reference | platform
-language: en
-notes: Optional — anything a learner should know before clicking.
----
-```
+## How to make a change
 
-Valid `subjects` values are defined in `src/content.config.ts`; add a new
-subject there in the same pull request if none fits. Run `npm run build`
-before pushing — it validates every field and fails on broken references.
-Avoid YAML pitfalls: if your text contains a colon followed by a space, quote
-the whole value.
+There is no build step. Edit the HTML, open the file in a browser to check
+it, and open a pull request:
 
-## Improving or proposing a path
+1. Fork the repository and edit `site/index.html` (any text editor works).
+2. Preview by opening the file directly in your browser — what you see is
+   exactly what ships.
+3. Open a pull request describing what you changed and why.
 
-Paths live in `src/content/paths/` — ordered stages, each with a rationale,
-resource references (by resource filename) and a **checkpoint**: a concrete
-artifact the learner produces. Look at an existing path first; match its tone
-— direct, honest about effort, no hype.
-
-The best path authors are people who recently walked the route themselves.
-Paths we want next: mathematics (arithmetic → calculus), basic digital
-literacy, and paths in languages other than English.
+Please keep the page as it is architecturally: **one self-contained HTML file
+per language, no JavaScript, no external requests, no dependencies.** That is
+what lets it load on a cheap phone, work offline once saved, be printed and
+handed out, and survive years without maintenance.
 
 ## Without a pull request
 
-Open a [GitHub issue](https://github.com/the-muses-ltd/Cassandra/issues)
-describing the resource, broken link or problem, and someone will turn it
-into a change. Testing a path as a real learner and reporting where you got
-stuck is one of the most valuable contributions there is.
-
-## Code contributions
-
-The site is deliberately boring technology: Astro, one CSS file, a little
-vanilla JavaScript, no client frameworks and no backend. Please keep it that
-way — every kilobyte matters to a learner on a cheap phone, and every
-dependency is a maintenance burden for volunteers. Run `npm run build` before
-submitting.
+Open a [GitHub issue](https://github.com/the-muses-ltd/Cassandra/issues) and
+someone will turn it into a change. "I followed the method and got stuck
+here" is one of the most useful issues you can file.
 
 ## Conduct
 
-Be kind, assume good faith, and remember many contributors and learners here
+Be kind, assume good faith, and remember many contributors and readers here
 are using their second language.

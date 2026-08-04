@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cassandra — how to learn anything online, free</title>
+<meta name="description" content="Cassandra used to be a directory of free learning resources. Now it is one page that teaches you how to find and structure free learning yourself — and points at what's still missing.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+  :root {
+    --bg: #f8f6f0;
+    --ink: #1c2b2a;
+    --muted: #52625f;
+    --accent: #0f766e;
+    --accent-ink: #0b5c56;
+    --rule: #d9d4c5;
+    --card: #ffffff;
+    --code-bg: #eceee9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131b1a;
+      --ink: #e8ece9;
+      --muted: #9fb0ac;
+      --accent: #2dd4bf;
+      --accent-ink: #5eead4;
+      --rule: #283533;
+      --card: #1a2423;
+      --code-bg: #1f2a29;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 1.075rem;
+    line-height: 1.65;
+  }
+  header, main, footer {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+  header {
+    padding-top: 2.5rem;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  header .brand { color: var(--accent-ink); font-weight: 700; }
+  h1 {
+    font-size: clamp(1.9rem, 5.5vw, 2.6rem);
+    line-height: 1.15;
+    margin: 1.2rem 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+  .lede { font-size: 1.15rem; color: var(--muted); margin-top: 0; }
+  h2 {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.25rem;
+    margin: 3rem 0 0.75rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 1rem;
+    margin: 1.75rem 0 0.25rem;
+  }
+  a { color: var(--accent-ink); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { color: var(--accent); }
+  p { margin: 0.9rem 0; }
+  em { font-style: italic; }
+  .proverb {
+    margin: 2.25rem 0;
+    padding: 1.1rem 1.4rem;
+    border-left: 3px solid var(--accent);
+    background: var(--card);
+    border-radius: 0 8px 8px 0;
+    font-size: 1.15rem;
+    font-style: italic;
+  }
+  ol.method { padding-left: 0; counter-reset: step; list-style: none; }
+  ol.method > li {
+    counter-increment: step;
+    margin: 1.6rem 0;
+    padding-left: 2.6rem;
+    position: relative;
+  }
+  ol.method > li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 0.1rem;
+    width: 1.8rem; height: 1.8rem;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--bg);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  ol.method > li > strong:first-child {
+    display: block;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+  }
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    white-space: pre-wrap;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  ul.helpers { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+  ul.helpers li { margin: 0.3rem 0; }
+  dl.list { margin: 1.25rem 0 0; }
+  dl.list dt {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 1.5rem 0 0.4rem;
+  }
+  dl.list dd { margin: 0.45rem 0 0.45rem 0; }
+  dl.list dd a { font-weight: 600; }
+  dl.list dd span { color: var(--muted); }
+  .note { font-size: 0.92rem; color: var(--muted); }
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    border-top: 1px solid var(--rule);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  footer p { margin: 0.4rem 0; }
+  @media print {
+    body { font-size: 11pt; }
+    .proverb { border-left-color: #000; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="brand">Cassandra</span> · a project of The Muses
+</header>
+
+<main>
+  <h1>How to learn anything online, free.</h1>
+  <p class="lede">This site used to be a directory of free learning resources. We retired it — happily — because the world stopped needing it. What you still need fits on one page. This is that page.</p>
+
+  <div class="proverb">
+    Give a person a fish and you feed them for a day.<br>
+    Teach a person to fish and you feed them for a lifetime.
+  </div>
+
+  <h2 id="why">Why we stopped curating</h2>
+  <p>In 2019, when Cassandra began, finding good free learning material was genuinely hard. Resources were scattered, search results were cluttered with paid courses, and knowing which free option was worth your time took research most learners couldn't do. Cataloguing it all was a real service.</p>
+  <p>In 2026, discovery is solved. Search engines and free AI assistants answer <em>"where can I learn X for free?"</em> in seconds — personally, in your language, adjusted to your situation. A directory that volunteers update monthly can't compete with an assistant that builds you a study plan in one conversation, and a stale directory is worse than none: dead links and outdated picks mislead exactly the people with the least room for wasted effort.</p>
+  <p>So instead of handing you fish, this page teaches the method. It's short, because the method is genuinely simple now. That's the good news of this decade.</p>
+
+  <h2 id="method">The method</h2>
+  <ol class="method">
+    <li>
+      <strong>Start with a goal, not a subject.</strong>
+      "Get hired as a junior web developer." "Pass the entrance exam." "Read English contracts with confidence." A goal tells you what to learn, what to skip, and when you're done. A subject ("learn coding") tells you none of that.
+    </li>
+    <li>
+      <strong>Have an AI assistant draft your plan.</strong>
+      The free tiers of modern assistants (Claude, ChatGPT, Gemini) are the closest thing to a personal academic advisor most people will ever get at no cost. Ask for a plan, not answers:
+      <pre>I want to [get hired as a junior web developer] within
+[12 months]. I can study [8] hours a week. My budget is $0.
+
+Build me a stage-by-stage study plan using only genuinely
+free resources — no trials, no paid certificates. Keep it
+realistic for my hours, and end every stage with something
+concrete I build that I could show an employer.
+
+Before you start, ask me questions to find out what I
+already know, and adjust the plan to fit.</pre>
+      Then keep using the assistant while you study:
+      <ul class="helpers">
+        <li>"Explain that again as if I've never programmed."</li>
+        <li>"Give me three different analogies for this."</li>
+        <li>"Quiz me on what I just read, one question at a time."</li>
+        <li>"Review this code / essay and tell me what a hiring manager would think."</li>
+      </ul>
+      <p class="note">One caution: assistants are sometimes confidently wrong, and they occasionally invent resources. Anchor whatever plan you get on the institutions in the list below — they're real, vetted, and durable.</p>
+    </li>
+    <li>
+      <strong>Anchor on sources that are reliably free.</strong>
+      Not free-trial free, not first-chapter free — free as a mission. The short list below has been free for a decade or more and will very likely stay that way.
+    </li>
+    <li>
+      <strong>Make things, not notes.</strong>
+      Every few weeks, produce something that exists outside the course platform: a website, an analysis, a piece of writing, a recorded conversation. If your goal is a job, this becomes your portfolio — and in most fields a portfolio now outweighs a paid certificate.
+    </li>
+    <li>
+      <strong>Show your work.</strong>
+      Put projects somewhere public — GitHub for code, a simple blog or document for anything else. Public work compounds: it proves your skill, attracts feedback, and marks your progress when motivation dips.
+    </li>
+    <li>
+      <strong>Keep a schedule and find peers.</strong>
+      Consistency beats intensity: five hours a week for a year outperforms a heroic month followed by nothing. And learning alone is the hardest way to learn — the freeCodeCamp forum, subject subreddits, and Discord study groups are full of people at your level. Accountability is free too.
+    </li>
+    <li>
+      <strong>Know what "free" actually means.</strong>
+      Needing an account is fine. Paying for a certificate is optional — the skill, demonstrated, is the credential. Anything with a countdown clock on it is marketing, not education. You should be able to learn the entire skill without entering a card number.
+    </li>
+  </ol>
+
+  <h2 id="where">Where to go: the short list</h2>
+  <p>Kept deliberately short. Each of these is free at its core, run by an institution or community with a track record, and broad enough to take you from beginner to genuinely skilled.</p>
+
+  <dl class="list">
+    <dt>Learn to code</dt>
+    <dd><a href="https://www.theodinproject.com/" rel="noopener">The Odin Project</a> <span>— full open-source path to web developer, project-driven, excellent community.</span></dd>
+    <dd><a href="https://www.freecodecamp.org/" rel="noopener">freeCodeCamp</a> <span>— thousands of hours of curriculum with free verified certifications, run by a nonprofit.</span></dd>
+    <dd><a href="https://cs50.harvard.edu/x/" rel="noopener">Harvard CS50x</a> <span>— the best first computer science course in the world, free to take (the optional certificate costs money; skip it).</span></dd>
+
+    <dt>Go deeper in computer science</dt>
+    <dd><a href="https://ocw.mit.edu/" rel="noopener">MIT OpenCourseWare</a> <span>— real MIT courses, lectures and problem sets included, no account needed.</span></dd>
+    <dd><a href="https://teachyourselfcs.com/" rel="noopener">Teach Yourself CS</a> <span>— one honest page mapping a full CS education from free and library materials.</span></dd>
+
+    <dt>Math &amp; science</dt>
+    <dd><a href="https://www.khanacademy.org/" rel="noopener">Khan Academy</a> <span>— arithmetic through calculus, statistics and sciences, with practice built in. A nonprofit, free forever by charter.</span></dd>
+    <dd><a href="https://openstax.org/" rel="noopener">OpenStax</a> <span>— peer-reviewed university textbooks from Rice University, free to read and download.</span></dd>
+
+    <dt>Data</dt>
+    <dd><a href="https://www.kaggle.com/learn" rel="noopener">Kaggle Learn</a> <span>— short practical courses in Python, SQL and machine learning, with real datasets (account required).</span></dd>
+
+    <dt>English</dt>
+    <dd><a href="https://www.bbc.co.uk/learningenglish/" rel="noopener">BBC Learning English</a> <span>— daily lessons at every level, from one of the most trusted names in broadcasting.</span></dd>
+    <dd><a href="https://learningenglish.voanews.com/" rel="noopener">VOA Learning English</a> <span>— news read slowly in graded English; ideal daily listening practice.</span></dd>
+
+    <dt>Reference &amp; books</dt>
+    <dd><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" rel="noopener">MDN Web Docs</a> <span>— the web's own manual, with a structured learning track.</span></dd>
+    <dd><a href="https://www.gutenberg.org/" rel="noopener">Project Gutenberg</a> <span>— 75,000+ free books, and a reminder that your public library card unlocks even more online.</span></dd>
+  </dl>
+
+  <h2 id="next">What's still missing</h2>
+  <p>Everything above shares one limitation: it teaches every learner the same material, in the same order, at the same pace. A good human tutor doesn't work that way. They figure out what you already know, notice the exact moment you get lost, back up, re-explain, and push you when you're ready. Decades of research say this is the most effective way humans learn — famously, tutored students perform around two standard deviations better than classroom students.</p>
+  <p>Software that does this is called <em>adaptive learning</em>, and it exists — but the capable versions are mostly paid products, narrow in subject, or pilots that never reach the people who need them. Rich students are beginning to get software tutors. Everyone else gets static content.</p>
+  <p>That is the gap The Muses is working on next: adaptive learning that is <strong>freely and widely available</strong>. It's a harder problem than a directory, which is exactly why it's worth our effort — and why this page is all the directory we'll ever maintain again.</p>
+  <p>You can follow that work, suggest fixes to this page, or translate it, on <a href="https://github.com/the-muses-ltd/Cassandra" rel="noopener">GitHub</a>.</p>
+</main>
+
+<footer>
+  <p><strong>Cassandra</strong>, by <a href="https://github.com/the-muses-ltd" rel="noopener">The Muses</a> — free access to education for all.</p>
+  <p>This page is a single HTML file. No cookies, no tracking, no build step, no dependencies. Copy it, translate it, print it, pass it on. <a href="https://github.com/the-muses-ltd/Cassandra/blob/master/LICENSE" rel="noopener">MIT licensed</a>.</p>
+</footer>
+
+</body>
+</html>

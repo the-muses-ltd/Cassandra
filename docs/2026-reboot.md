@@ -64,3 +64,38 @@ Stage 1 focus from the original educational roadmap, the MIT license, and the
 name.
 
 The 2019 implementation is preserved in git history for anyone curious.
+
+---
+
+## Postscript (August 2026): one page, not a platform
+
+Days after the learning-paths prototype above was built, The Muses took the
+assessment to its honest conclusion and went a step further.
+
+**The paths site was still curation — fish, nicely arranged.** Every path it
+contained is something a learner can now generate on demand, personalized to
+their goal, hours and prior knowledge, in one conversation with a free AI
+assistant. A hand-written generic path cannot beat that, and maintaining a
+worse version of a solved thing is not the mission. The genuinely durable
+value was much smaller than a site: the *method* for structuring your own
+free education, and a *short list* of institutions whose material is free as
+a mission rather than as a funnel. That fits on one page.
+
+**The decision:** replace the site with a single self-contained HTML page —
+a teach-a-person-to-fish page — and delete the toolchain entirely. No
+dependencies, no build step, no JavaScript, no tracking. The 2019 app's 391
+open security alerts were a lesson in what unmaintained web applications
+become; a page with no dependency tree cannot rot that way, and this project
+has already proven it may sit unattended for years.
+
+**Where the effort goes instead: adaptive learning.** Static content — even
+perfectly curated static content — teaches everyone the same material in the
+same order at the same pace. The remaining, real inequity is access to
+*teaching*: instruction that diagnoses, paces and remediates like a tutor
+does. Software with that behavior exists but is overwhelmingly paid, narrow
+or piloted — not freely and widely available. Making it so is the hard
+problem worthy of The Muses' building energy, and the subject of its next
+chapter.
+
+The learning-paths prototype (Astro, four paths, 24 vetted resources) is
+preserved in this branch's git history alongside the 2019 app.
